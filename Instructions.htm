@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<html>
+<head>   
+<title>I&C SCI 53:  PRINCP IN SYS DESGN ( Course Code: 36680 )</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<font face="arial, geneva, helvetica, sans-serif" size="-1">
+
+<p>
+<font size="+1"><strong>PRINCP IN SYS DESGN, Lab 1</strong></font>
+<br>
+I&C SCI 53, Course Code: 36680
+<br>
+Quarter: Spring Quarter 2016
+</p>
+
+<hr noshade>
+
+<p>
+
+You need to write a <em> Record Keeper </em> program which allows you to view
+and manipulate data records. Assume that all records are initially
+contained in a <em>record file</em> which contains one record on each line of
+the file. Each record in the record file contains three data items
+separated by tab characters. The three data items are name, address,
+and phone number, in that order. For example, a record file containing
+three records might look like this:
+
+</p>
+
+<pre>
+Joe Smith    10 Main St.    555-1212
+Jane Winter    11 Main St.    555-2323
+June Spring    12 Main St.    +1-49-101-555-1212
+</pre>
+
+<p>
+
+Your record keeper program should prompt the user for a command,
+perform the command, and then prompt for the next command. Your
+program should support the following 5 commands:
+
+</p>
+
+<ul>
+
+<li> <b> read </b> - Read a record file from disk and represent its
+contents in memory using data structures of your choosing. This
+command takes one argument, the name of a record file to be read. This
+command does not print any output.
+
+<br>
+Example use:
+
+
+<pre>
+> read test.rec
+>
+</pre>
+
+<li> <b> write </b> - Write a record file to disk which contains the
+records currently stored in memory using data structures of your
+choice. This command takes one argument, the name of the record file
+to be written to disk. The command does not print any output.
+
+<br>
+Example use:
+<pre>
+> write test.rec
+>
+</pre>
+
+<li> <b>print </b>- Print all of the records currently loaded into
+memory, in order. Each record should be printed on a single line and
+should be prefixed with a unique number which indicates its order with
+respect to the other records.
+
+<br>
+Example use:
+
+<pre>
+> print
+1 Joe Smith    10 Main St.    555-1212
+2 Jane Winter    11 Main St.    555-2323
+3 June Spring    12 Main St.    +1-49-101-555-1212
+>
+</pre>
+
+<li> <b> delete </b>- Deletes a record from the your memory
+store. This command takes one argument which is the number of the
+record to be deleted. Note that the remaining records should be
+renumbered from 1 so that there is not a gap in the record numbering.
+
+<p>
+Example use:
+</p>
+
+<pre>
+> delete 2
+> print
+1 Joe Smith    10 Main St.    555-1212
+2 June Spring    12 Main St.    +1-49-101-555-1212
+>
+</pre>
+
+<li><b>quit </b>- This command takes no arguments and it ends the
+execution of your program.
+
+</ul>
+ 
+<p>
+TAs will tell you how to upload your work to the website.
+</p>
+
+<p>
+These are some additional constraints on the input and output of lab1 which must be guaranteed in order for the autograding scripts to work.
+</p>
+
+<p>
+
+Format of a record file: These format rules apply for any record file which is read using a read command, as well as any record file created by your program using a write command.
+
+</p>
+<ul>
+<li>    Each line should contain three fields, a name, address, and phone number, in that order.
+<li>    Each field should be separated by a single tab.
+<li>    Each field of data can contain spaces but no tabs.
+<li>    Each line should have a carriage return at the end of it and should have no more than 80 characters.
+ <li>   A record file should have no more than 100 records in it.
+</ul>
+<p>
+Format of user input accepted by your program:
+</p>
+<ul>
+<li>    Input is accepted one line at a time.
+<li>    Each line must be terminated with a carriage return.
+<li>    Each line may contain only one command, together with its argument (if it has one).
+<li>    There can be any number of spaces or tabs separating the tokens on a line.
+<li>    There can be any number of spaces or tabs before the first token on a line or after the last token on a line.
+</ul>
+<p>
+Format of the output of the print command:
+</p>
+<ul>
+<li>    There should be one output line for each record of data.
+<li>    The first thing on each output line should be an integer. There should be no spaces before this integer.
+<li>    Each output line should contain four fields of data, an integer, a name, an address, and a phone number.
+<li>    Each field of data should be separated by a single tab.
+</ul>
+
+
+<hr noshade>
+
+<table width="100%" border="0" summary="Footer information including links to the EEE home page and UCI home page and the URL for this page.">
+<tr>
+	<td align="left">
+	<font face="arial, geneva, helvetica, sans-serif" size="-2">
+	<a href="http://eee.uci.edu/" title="EEE Home Page">The Electronic Educational Environment</a>
+    <br>
+    <a href="http://www.uci.edu/" title="UCI Home Page">University of California, Irvine</a>
+	</font>
+	</td>
+	<td align="right">
+	</td> 
+</tr>
+</table>
+
+
+</font>
+</body>
+</html>
